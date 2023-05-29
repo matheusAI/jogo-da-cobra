@@ -2,9 +2,7 @@ var Snake = (function () {
 
   const INITIAL_TAIL = 4;
   var fixedTail = true;
-
   var intervalID;
-
   var tileCount = 10;
   var gridSize = 400/tileCount;
 
@@ -14,12 +12,9 @@ var Snake = (function () {
   var player = { x: INITIAL_PLAYER.x, y: INITIAL_PLAYER.y };
 
   var walls = false;
-
   var fruit = { x:1, y:1 };
-
   var trail = [];
   var tail = INITIAL_TAIL;
-
   var reward = 0;
   var points = 0;
   var pointsMax = 0;
@@ -83,7 +78,6 @@ var Snake = (function () {
         }
       }
     },
-
     RandomFruit: function () {
       if(walls){
         fruit.x = 1+Math.floor(Math.random() * (tileCount-2));
